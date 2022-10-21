@@ -1,4 +1,23 @@
-const Donut = require('../models/donut')
+const { Donut, DonutShop } = require('../models')
+
+const createDonutShop = async (req, res) => {
+  try {
+    const donutShop = await new DonutShop(req.body)
+    await donutShop.save()
+    return res.json({ donutShop })
+  } catch (error) {
+    return res.json({ error: error.message })
+  }
+}
+
+const getAllDonutShops = async (req, res) => {
+  try {
+    const donutShop = await DonutShop.find({})
+    return res.json({ donutShop })
+  } catch (error) {
+    return res.send(error.message)
+  }
+}
 
 const createDonut = async (req, res) => {
   try {
@@ -61,5 +80,7 @@ module.exports = {
   getAllDonuts,
   getDonutById,
   updateDonut,
-  deleteDonut
+  deleteDonut,
+  createDonutShop,
+  getAllDonutShops
 }
