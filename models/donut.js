@@ -6,7 +6,7 @@ const Donut = new Schema(
     price: { type: String, required: true },
     review: { type: String, required: true },
     image: { type: String, required: true },
-    donut_id: { type: Schema.Types.ObjectId, ref: 'donut_id' }
+    donutShop_id: { type: Schema.Types.ObjectId, ref: 'donutShop_id' }
   },
   { timestamps: true }
 )

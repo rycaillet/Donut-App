@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 
+let MONGODB_URI = 'mongodb://127.0.0.1:27017/donutDatabase'
+
 mongoose
-  .connect('mongodb://127.0.0.1:27017/donutDatabase')
+  .connect(MONGODB_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB')
   })
