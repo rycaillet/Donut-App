@@ -11,7 +11,7 @@ app.use(express.json())
 
 app.use(logger('dev'))
 
-app.use('/api', routes)
+app.use('/donut', routes)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
