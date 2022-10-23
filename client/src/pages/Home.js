@@ -29,7 +29,7 @@ const Home = () => {
     getDonuts()
     getDonutShop()
   }, [])
-  console.log(donuts.donut_name)
+  console.log(donuts.name)
 }
 
 export default Home
