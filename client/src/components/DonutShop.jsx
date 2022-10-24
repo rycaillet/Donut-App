@@ -1,8 +1,8 @@
 import React from 'react'
 
-const DonutShop = ({donutShopName, location, review, url, image}) => {
+const DonutShop = ({donutShopName, location, review, url, image, onClick}) => {
   return (
-    <div className="donut-shops">
+    <div className="donut-shops" onClick={onClick}>
         <div className="info-wrapper">
             <h3>{donutShopName}</h3>
         <div className="img-wrapper">

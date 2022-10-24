@@ -1,15 +1,15 @@
 import React from 'react'
 
-const DonutDetails = (props) => {
+const DonutDetails = ({donutName, price, image, onClick}) => {
     return (
-        <div className="donuts">
-            <div className="img-wrapper">
-                <img src={props.image} alt="shop-image" />
-            </div>
-            <div className="info-wrapper">
-                <h3>{props.name}</h3>
-                <p>{props.price}</p>
-            </div>
+        <div className="donuts" onClick={onClick}>
+        <div className="info-wrapper">
+            <h3>{donutName}</h3>
+        <div className="img-wrapper">
+            <img src={image} alt="shop-image" />
+        </div>
+            <p>price: {price}</p>
+        </div>
         </div>
     )
 }

@@ -51,8 +51,3 @@ body {
     font-family: Helvetica;
 }
 
-.donut-shops {
-    flex-flow: row;
-    justify-content: space-between;
-    align-items:flex-start;
-}
