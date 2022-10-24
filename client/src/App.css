@@ -17,15 +17,42 @@ nav {
     padding-top: 20px;
 }
 
-.home-img1 {
-    width: 100px;
+.home-donut img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
-.home-img1 img {
-    margin: auto 5px;
+/* .home-img1 img { */
+    /* margin: auto 5px; */
     /* float: left; */
-    width: 600px;
-    height: 400px;
-    text-align: center;
+    /* width: 600px; */
+    /* height: 400px; */
+/* } */
+
+.about {
+    padding: 10px;
 }
 
+.about h1 {
+    display:flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+body {
+    font-family: Helvetica;
+}
+
+.donut-shops {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items:flex-start;
+}
