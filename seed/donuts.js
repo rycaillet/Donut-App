@@ -21,7 +21,7 @@ const main = async () => {
       donut_name: 'Spider donut',
       price: '$1.59',
       image:
-        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_p4TCJs-mGcOrfaWw9f2muKjpD2hk0079OlVLJmtd0l_jxxLLmUxYSauSIaDHNYYtEkhoOVLmCp1nZXspcivQBb32XmkOzMhFG_WT-Gw8ruqUi582qWjPg2Aa7hZr8NMsyYMt90c20epuZbqcqyWLw0sQmeAxzWkKCP-5rCzPDPfV8Qx40_W2p3QY/w400-h315/Dunkin-Spider-Donut.jpg',
+        'https://s3.amazonaws.com/cms.ipressroom.com/285/files/20189/5bc73b212cfac22d21fa8ad2_Halloween+Donuts+Lifestyle+Image/Halloween+Donuts+Lifestyle+Image_e859a3c3-5360-46b1-96e6-e658415fff2a-prv.jpg',
       donutShop_id: dunkin[0]._id
     },
     {

@@ -1,6 +1,9 @@
 import React from 'react'
 
 const DonutDetails = ({donutName, price, image, onClick}) => {
+
+    
+
     return (
         <div className="donuts" onClick={onClick}>
         <div className="info-wrapper">

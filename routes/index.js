@@ -18,4 +18,8 @@ router.put('/donuts/:id', controllers.updateDonut)
 
 router.delete('/donuts/:id', controllers.deleteDonut)
 
+router.get('/donutShops/:id', controllers.getDonutShopById)
+
+router.get('/donutShops/:id/donuts', controllers.getDonutsByShop)
+
 module.exports = router

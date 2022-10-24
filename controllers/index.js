@@ -19,6 +19,15 @@ const getAllDonutShops = async (req, res) => {
   }
 }
 
+const getDonutShopById = async (req, res) => {
+  try {
+    const donutShop = await DonutShop.findById(req.params.id)
+    return res.json({ donutShop })
+  } catch (error) {
+    return res.send(error.message)
+  }
+}
+
 const createDonut = async (req, res) => {
   try {
     const donut = await new Donut(req.body)
@@ -75,6 +84,15 @@ const deleteDonut = async (req, res) => {
   }
 }
 
+const getDonutsByShop = async (req, res) => {
+  try {
+    const donutsByShop = await Donut.find({ donutShop_id: req.params.id })
+    return res.json(donutsByShop)
+  } catch (error) {
+    return res.send(error.message)
+  }
+}
+
 module.exports = {
   createDonut,
   getAllDonuts,
@@ -82,5 +100,7 @@ module.exports = {
   updateDonut,
   deleteDonut,
   createDonutShop,
-  getAllDonutShops
+  getAllDonutShops,
+  getDonutShopById,
+  getDonutsByShop
 }

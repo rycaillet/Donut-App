@@ -21,12 +21,12 @@ const ViewDonutDetails = () => {
 
   return (
     <div className="main">
-      <h1>Donut Shops</h1>
+      <h1>Donuts</h1>
       <section className="donutShop-container">
         {donuts.map((donut) => (
           <DonutDetails
             key={donut._id}
-            donutName={donut.donut_name}
+            donutName={donut.name}
             price={donut.price}
             image={donut.image}
           />

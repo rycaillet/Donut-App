@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import DonutShop from '../components/DonutShop'
+import { Link } from 'react-router-dom'
 
 const Base_URL = 'http://localhost:3001/api'
 
@@ -24,14 +25,10 @@ const ViewDonutShops = () => {
       <h1>Donut Shops</h1>
       <section className="donutShop-container">
         {donutShop.map((donutShops) => (
-          <DonutShop
-            key={donutShops._id}
-            donutShopName={donutShops.name}
-            location={donutShops.location}
-            review={donutShops.review}
-            url={donutShops.url}
-            image={donutShops.image}
-          />
+          <Link to={`/donutshops/${donutShops._id}`} key={donutShops._id}>
+            <h2>{donutShops.name}</h2>
+            <img src={donutShops.image}></img>
+          </Link>
         ))}
       </section>
     </div>
