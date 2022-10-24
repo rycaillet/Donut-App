@@ -1,16 +1,16 @@
 import React from 'react'
 
-const DonutShop = (props) => {
+const DonutShop = ({donutShopName, location, review, url, image}) => {
   return (
     <div className="donut-shops">
-        <div className="img-wrapper">
-            <img src={props.image} alt="shop-image" />
-        </div>
         <div className="info-wrapper">
-            <h3>{props.name}</h3>
-            <p>Located at {props.location}</p>
-            <p>{props.review}</p>
-            <a href="link-to-donut-shop">{props.url}</a>
+            <h3>{donutShopName}</h3>
+        <div className="img-wrapper">
+            <img src={image} alt="shop-image" />
+        </div>
+            <p>Location: {location}</p>
+            <p>Rating: {review}</p>
+            <a href="link-to-donut-shop">{url}</a>
         </div>
         </div>
   )
