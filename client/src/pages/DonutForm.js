@@ -40,7 +40,15 @@ const DonutFrom = () => {
         </div>
         <div>
           <label htmlFor="image"></label>
+          <input
+            type="text"
+            id="image"
+            onChange={handleChange}
+            value={formState.image}
+            placeholder="image url"
+          ></input>
         </div>
+        <div></div>
       </form>
     </div>
   )
