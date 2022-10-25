@@ -14,9 +14,9 @@ const DonutForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/donuts', formState)
+    axios.post('http://localhost:3001/api/donutShops/donuts', formState)
     setFormState(initialForm)
-    navigate('/donuts')
+    navigate(`/api/donuts/${donutId}`)
   }
 
   const handleChange = (e) => {
@@ -58,7 +58,7 @@ const DonutForm = () => {
           ></input>
         </div>
         <div>
-          <button type="submit">Add a Donut</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>

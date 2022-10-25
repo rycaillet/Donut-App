@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 const DonutDetails = ({donutName, price, image, onClick}) => {
 
-    
+    let { id } = useParams()
 
     return (
         <div className="donuts" onClick={onClick}>
@@ -13,6 +14,9 @@ const DonutDetails = ({donutName, price, image, onClick}) => {
         </div>
             <p>price: {price}</p>
         </div>
+            <Link type="button" to={`/api/donuts/${id}/new_donut`}>
+        <button className="add-donut">Add a new donut</button>
+            </Link>
         </div>
     )
 }

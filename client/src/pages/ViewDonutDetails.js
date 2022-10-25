@@ -34,12 +34,15 @@ const ViewDonutDetails = () => {
       <h1>Donuts</h1>
       <section className="donutShop-container">
         {donuts.map((donut) => (
-          <DonutDetails
-            key={donut._id}
-            donutName={donut.name}
-            price={donut.price}
-            image={donut.image}
-          />
+          <>
+            <DonutDetails
+              key={donut._id}
+              donutName={donut.name}
+              price={donut.price}
+              image={donut.image}
+            />
+            <button onClick={() => deleteDonut(donut._id)}>x</button>
+          </>
         ))}
       </section>
     </div>
