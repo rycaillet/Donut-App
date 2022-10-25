@@ -19,4 +19,8 @@ const DonutFrom = () => {
     setFormState(initialForm)
     navigate('/donuts')
   }
+
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.id]: e.target.value })
+  }
 }
