@@ -1,22 +1,25 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const DonutForm = () => {
   let navigate = useNavigate()
+  let { id } = useParams()
   const initialForm = {
     name: '',
     price: '',
-    image: ''
+    image: '',
+    donutShop_id: id
   }
 
   const [formState, setFormState] = useState(initialForm)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/api/donutShops/donuts', formState)
+    axios.post('http://localhost:3001/api/donuts', formState)
+
     setFormState(initialForm)
-    navigate(`/api/donuts/${donutId}`)
+    navigate(`/donutshops/${id}`)
   }
 
   const handleChange = (e) => {
@@ -24,7 +27,7 @@ const DonutForm = () => {
   }
 
   return (
-    <div className="DonutForm">
+    <div className="donutForm">
       <h1>Add a New Donut</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -38,13 +41,13 @@ const DonutForm = () => {
           ></input>
         </div>
         <div>
-          <label htmlFor="image"></label>
+          <label htmlFor="image">Image URL:</label>
           <input
             type="text"
             id="image"
             onChange={handleChange}
             value={formState.image}
-            placeholder="image url"
+            required
           ></input>
         </div>
         <div>

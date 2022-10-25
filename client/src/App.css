@@ -3,6 +3,12 @@
     margin: 0px;
 }
 
+body {
+    background-image: url("https://t3.ftcdn.net/jpg/03/16/53/88/360_F_316538859_TJ8brtVlusgxG8cV6nO2ydtVOARpjEe2.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
 nav {
     background-color: rgb(2, 0, 9);
     display: flex;
@@ -17,11 +23,46 @@ nav {
     padding-top: 20px;
 }
 
-.home-donut img {
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+h3, h4 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.url {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.x {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+.add-donut {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.donutForm {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
 }
 
 /* .home-img1 img { */
@@ -39,7 +80,7 @@ nav {
     display:flex;
     justify-content: center;
     padding: 20px 0px 20px 0px;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 h1 {

@@ -2,7 +2,7 @@ const { Schema } = require('mongoose')
 
 const DonutShop = new Schema(
   {
-    donutShop_name: { type: String, required: true },
+    name: { type: String, required: true },
     location: { type: String, required: true },
     review: { type: String, required: true },
     url: { type: String, required: true },

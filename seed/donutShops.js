@@ -6,21 +6,21 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const donutShops = [
     {
-      donutShop_name: 'Dunkin',
+      name: 'Dunkin',
       location: '10020 Main St, Fairfax, VA 22031',
       review: '3 out of 5 stars',
       url: 'locations.dunkindonuts.com',
       image: 'https://i.imgur.com/syeDQkp.jpeg'
     },
     {
-      donutShop_name: 'Duck Donuts',
+      name: 'Duck Donuts',
       location: '10694 Fairfax Blvd, Fairfax, VA 22030',
       review: '4 out of 5 stars',
       url: 'duckdonuts.com',
       image: 'https://i.imgur.com/Aolszob.jpeg'
     },
     {
-      donutShop_name: 'DONUTCHEW',
+      name: 'DONUTCHEW',
       location: '11703 Fair Oaks Mall #L-145, Fairfax, Va 22033',
       review: '4 out of 5 stars',
       url: 'donutchew.com',
@@ -28,7 +28,7 @@ const main = async () => {
         'https://patch.com/img/cdn20/users/22924509/20220719/010427/styles/patch_image/public/img-0629___19130244295.jpg'
     },
     {
-      donutShop_name: 'Texas Donuts',
+      name: 'Texas Donuts',
       location: '13830 Lee Hwy #4, Centreville, VA 20120',
       review: '5 out of 5 stars',
       url: 'texasdonutsva.com',
