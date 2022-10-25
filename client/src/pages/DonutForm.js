@@ -23,4 +23,25 @@ const DonutFrom = () => {
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
+
+  return (
+    <div className="DonutForm">
+      <h1>Add a New Donut</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Donut title</label>
+          <input
+            type="text"
+            id="name"
+            onChange={handleChange}
+            value={formState.name}
+            required
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="image"></label>
+        </div>
+      </form>
+    </div>
+  )
 }
