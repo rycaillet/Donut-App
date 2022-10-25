@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import DonutShop from '../components/DonutShop'
 import { Link } from 'react-router-dom'
 
 const Base_URL = 'http://localhost:3001/api'

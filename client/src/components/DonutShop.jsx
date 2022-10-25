@@ -37,15 +37,15 @@ const DonutShop = () => {
         <div className="img-wrapper">
             <img src={donutShop.image} alt="shop-image" />
         </div>
-            <p>Location: {donutShop.location}</p>
-            <p>Rating: {donutShop.review}</p>
+            <h3>Location: {donutShop.location}</h3>
+            <h4>Rating: {donutShop.review}</h4>
             <a href="link-to-donut-shop">{donutShop.url}</a>
         </div>
         {donuts.map((donut) => (
             <div>
             <h1>{donut.name}</h1>
             <img src={donut.image}></img>
-            <p>price: {donut.price}</p>
+            <h4>price: {donut.price}</h4>
             </div>
             
         ))}
