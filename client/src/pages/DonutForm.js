@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import e from 'express'
 
-const DonutFrom = () => {
+const DonutForm = () => {
   let navigate = useNavigate()
   const initialForm = {
     name: '',
@@ -29,7 +28,7 @@ const DonutFrom = () => {
       <h1>Add a New Donut</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Donut title</label>
+          <label htmlFor="name">Donut Name:</label>
           <input
             type="text"
             id="name"
@@ -48,8 +47,22 @@ const DonutFrom = () => {
             placeholder="image url"
           ></input>
         </div>
-        <div></div>
+        <div>
+          <label htmlFor="price">Price:</label>
+          <input
+            type="text"
+            id="price"
+            onChange={handleChange}
+            value={formState.price}
+            required
+          ></input>
+        </div>
+        <div>
+          <button type="submit">Add a Donut</button>
+        </div>
       </form>
     </div>
   )
 }
+
+export default DonutForm

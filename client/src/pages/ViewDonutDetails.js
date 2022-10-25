@@ -19,6 +19,16 @@ const ViewDonutDetails = () => {
     getDonuts()
   }, [])
 
+  const deleteDonut = async (id) => {
+    try {
+      const response = await axios.delete(`http:localhost:3001/donuts/${id}`)
+      console.log(response)
+      getDonuts()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className="main">
       <h1>Donuts</h1>
