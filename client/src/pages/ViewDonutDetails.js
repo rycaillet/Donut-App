@@ -19,16 +19,6 @@ const ViewDonutDetails = () => {
     getDonuts()
   }, [])
 
-  //   const deleteDonut = async (id) => {
-  //     try {
-  //       const response = await axios.delete(`${Base_URL}/donuts/${id}`)
-  //       console.log(response)
-  //       getDonuts()
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-
   return (
     <div className="main">
       <h1>Donuts</h1>
