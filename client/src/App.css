@@ -182,5 +182,38 @@ input {
     margin-left: 10px;
   }
 
+  #donut-picture-1 {
+    background-image: url("https://i.imgur.com/0RcLeBE.jpeg");
+  }
+  
+  .donut-picture {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-top: 110px;
+    margin-left: 170px;
+    border-radius: 25%;
+    transform:rotate(-40deg);
+  }
+
+  @keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+  }
+
+  .donut-picture:hover {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+  }
+
 
 
