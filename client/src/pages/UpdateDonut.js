@@ -5,14 +5,14 @@ import { useParams, useNavigate } from 'react-router-dom'
 const Base_URL = 'http://localhost:3001/api'
 
 const UpdateDonut = () => {
-  let { id } = useParams()
+  let { donutId } = useParams()
   let navigate = useNavigate()
 
   const initialForm = {
     name: '',
     price: '',
     image: '',
-    donutShop_id: id
+    donutShop_id: donutId
   }
 
   const [donutState, setDonutState] = useState(initialForm)
@@ -20,7 +20,8 @@ const UpdateDonut = () => {
   useEffect(() => {
     const getDonutById = async () => {
       try {
-        const response = await axios.get(`${Base_URL}/donuts`)
+        const response = await axios.get(`${Base_URL}/donuts/${donutId}`)
+        // console.log(response.data.donut)
         setDonutState(response.data.donut)
       } catch (err) {
         console.log(err)
@@ -28,18 +29,22 @@ const UpdateDonut = () => {
     }
 
     getDonutById()
-  }, [id])
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.get(`${Base_URL}/donuts/${id}`, donutState)
+    try {
+      axios.put(`${Base_URL}/donuts/${donutId}`, donutState)
+    } catch (err) {
+      console.log(err)
+    }
 
     setDonutState(initialForm)
-    navigate(`/donutshops/${id}`)
+    navigate(`/donutshops/${donutState.donutShop_id}`)
   }
 
   const handleChange = (e) => {
-    setDonutState({ ...formState, [e.target.id]: e.target.value })
+    setDonutState({ ...donutState, [e.target.id]: e.target.value })
   }
 
   return (
@@ -52,7 +57,7 @@ const UpdateDonut = () => {
             type="text"
             id="name"
             onChange={handleChange}
-            value={donutState.name}
+            value={donutState?.name}
             required
           ></input>
         </div>
@@ -62,7 +67,7 @@ const UpdateDonut = () => {
             type="text"
             id="image"
             onChange={handleChange}
-            value={donutState.image}
+            value={donutState?.image}
             required
           ></input>
         </div>
@@ -72,7 +77,7 @@ const UpdateDonut = () => {
             type="text"
             id="price"
             onChange={handleChange}
-            value={donutState.price}
+            value={donutState?.price}
             required
           ></input>
         </div>
@@ -83,3 +88,5 @@ const UpdateDonut = () => {
     </div>
   )
 }
+
+export default UpdateDonut

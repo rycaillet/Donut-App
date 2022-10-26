@@ -23,7 +23,7 @@ const ViewDonutShops = () => {
     <div className="main">
       <h1>Donut Shops</h1>
       <section className="donutShop-container">
-        {donutShop.map((donutShops) => (
+        {donutShop?.map((donutShops) => (
           <Link to={`/donutshops/${donutShops._id}`} key={donutShops._id}>
             <h2>{donutShops.name}</h2>
             <img src={donutShops.image}></img>

@@ -6,6 +6,7 @@ import About from './pages/About'
 import ViewDonutShops from './pages/ViewDonutShops'
 import DonutShop from './components/DonutShop'
 import DonutForm from './pages/DonutForm'
+import UpdateDonut from './pages/UpdateDonut'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/donutShops" element={<ViewDonutShops />} />
           <Route path="/donutshops/:id" element={<DonutShop />} />
           <Route path="/donutshops/:id/donutForm" element={<DonutForm />} />
+          <Route path="/donut/:donutId/update" element={<UpdateDonut />} />
         </Routes>
       </main>
     </div>
