@@ -75,13 +75,21 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    border-radius: 10px;
 }
 
-h3, h4 {
+h3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
 }
 
 .url {
