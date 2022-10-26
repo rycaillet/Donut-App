@@ -69,6 +69,7 @@ h1:hover {
             0 0 0 #fffb19;
     }
 }
+/* got this effect from a tiktok */
 
 img {
     display: block;
@@ -214,6 +215,7 @@ input {
     animation: vibrate 0.5s;
     animation-iteration-count: infinite;
   }
-
+    
+  /* Got this effect from => https://imagekit.io/blog/creating-css-image-effects/ */
 
 

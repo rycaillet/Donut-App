@@ -50,7 +50,7 @@ const DonutShop = () => {
         </div>
             <h3>Location: {donutShop.location}</h3>
             <h4>Rating: {donutShop.review}</h4>
-            <a href="link-to-donut-shop" className="url">{donutShop.url}</a>
+            <a href={`https://${donutShop.url}`} className="url">{donutShop.url}</a>
         </div>
         {donuts.map((donut) => (
             <div>
