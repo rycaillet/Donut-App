@@ -174,23 +174,38 @@ a {
     color:rgb(91, 212, 239);
 } 
 
-button {
+.button1 {
     background: #fff;
     color: #222;
     padding: 1em 2em;
-    margin:20px;
+    margin-left: 660px;
     border-radius: 6px;
+    margin-top: 25px;
     font-size: 1rem;
     font-weight: 900;
     cursor: pointer;
-    box-shadow: 0 6px 0 #222;
+    box-shadow: 0 6px 0 rgb(91, 212, 239);
+    transition: 0.2s;
+}
+
+.button2 {
+    background: #fff;
+    color: #222;
+    padding: 1em 2em;
+    margin-left: 25px;
+    border-radius: 6px;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgb(91, 212, 239);
     transition: 0.2s;
 }
 
 button:hover {
     transform: translateY(5px);
     box-shadow: 0 2px 0 #222;
-}
+} 
 
 label {
     display: flex;

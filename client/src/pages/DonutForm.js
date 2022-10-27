@@ -28,7 +28,7 @@ const DonutForm = () => {
 
   return (
     <div className="donutForm">
-      <h1>Add a New Donut</h1>
+      <h1 className="add">Add a New Donut</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Donut Name:</label>
@@ -61,7 +61,9 @@ const DonutForm = () => {
           ></input>
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button type="button" className="button2">
+            Submit
+          </button>
         </div>
       </form>
     </div>

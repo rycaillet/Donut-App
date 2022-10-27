@@ -82,7 +82,9 @@ const UpdateDonut = () => {
           ></input>
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button type="button" className="button2">
+            Submit
+          </button>
         </div>
       </form>
     </div>
