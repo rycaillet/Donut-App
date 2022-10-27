@@ -64,7 +64,7 @@ const DonutShop = () => {
             <div key={donut?._id}>
             <h1>{donut?.name}</h1>
             <img src={donut?.image}></img>
-            <h4>price: {donut?.price}</h4>
+            <h4>Price: {donut?.price}</h4>
             <button onClick={() => deleteDonut(donut?._id)} className="x">x</button>
             <Link to={`/donut/${donut?._id}/update`}>
             <button className="update-button">Update</button>
