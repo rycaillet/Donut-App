@@ -12,7 +12,7 @@ const ViewDonutDetails = () => {
     const response = await axios.get(`${Base_URL}/donuts`)
 
     setDonuts(response.data.donuts)
-    console.log(response.data.donuts)
+    // console.log(response.data.donuts)
   }
 
   useEffect(() => {

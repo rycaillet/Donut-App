@@ -74,7 +74,7 @@ const DonutShop = () => {
         </div>
         <div>
         <Link type="button" to={`/donutshops/${id}/donutForm`}>
-        <button className="button1">Add a new donut</button>
+        <button className="button3">Add a new donut</button>
             </Link>
         </div>
         </div>

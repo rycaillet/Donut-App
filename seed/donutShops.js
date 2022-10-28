@@ -17,7 +17,8 @@ const main = async () => {
       location: '10694 Fairfax Blvd, Fairfax, VA 22030',
       review: '4 out of 5 stars',
       url: 'duckdonuts.com',
-      image: 'https://i.imgur.com/Aolszob.jpeg'
+      image:
+        'https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Duck_Donuts_%28logo%29.svg/1200px-Duck_Donuts_%28logo%29.svg.png'
     },
     {
       name: 'DONUTCHEW',

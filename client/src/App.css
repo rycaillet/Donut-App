@@ -24,6 +24,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 3em;
+    padding: 10px;
 }
 
 .home-header h1 {
@@ -178,7 +179,22 @@ a {
     background: #fff;
     color: #222;
     padding: 1em 2em;
-    margin-left: 660px;
+    margin-left: 600px;
+    border-radius: 6px;
+    margin-top: 25px;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 6px 0 rgb(91, 212, 239);
+    transition: 0.2s;
+    
+}
+
+.button2 {
+    background: #fff;
+    color: #222;
+    padding: 1em 2em;
+    margin-left: 25px;
     border-radius: 6px;
     margin-top: 25px;
     font-size: 1rem;
@@ -188,11 +204,11 @@ a {
     transition: 0.2s;
 }
 
-.button2 {
+.button3 {
     background: #fff;
     color: #222;
     padding: 1em 2em;
-    margin-left: 25px;
+    margin-left: 875px;
     border-radius: 6px;
     margin-top: 25px;
     font-size: 1rem;
