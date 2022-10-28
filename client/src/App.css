@@ -179,7 +179,7 @@ a {
     background: #fff;
     color: #222;
     padding: 1em 2em;
-    margin-left: 600px;
+    margin-left: 10px;
     border-radius: 6px;
     margin-top: 25px;
     font-size: 1rem;
@@ -208,7 +208,7 @@ a {
     background: #fff;
     color: #222;
     padding: 1em 2em;
-    margin-left: 875px;
+    margin-left: 10px;
     border-radius: 6px;
     margin-top: 25px;
     font-size: 1rem;
@@ -216,6 +216,20 @@ a {
     cursor: pointer;
     box-shadow: 0 6px 0 rgb(91, 212, 239);
     transition: 0.2s;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {

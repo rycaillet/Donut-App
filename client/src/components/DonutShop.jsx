@@ -65,14 +65,16 @@ const DonutShop = () => {
             <h1>{donut?.name}</h1>
             <img src={donut?.image}></img>
             <h4>Price: {donut?.price}</h4>
+            <div className="buttons">
             <button onClick={() => deleteDonut(donut?._id)} className="button1">x</button>
             <Link to={`/donut/${donut?._id}/update`}>
             <button className="button1">Update</button>
             </Link>
             </div>
+            </div>
         ))}
         </div>
-        <div>
+        <div className="buttons1">
         <Link type="button" to={`/donutshops/${id}/donutForm`}>
         <button className="button3">Add a new donut</button>
             </Link>
