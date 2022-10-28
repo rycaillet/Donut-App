@@ -4,19 +4,11 @@
 }
 
 body {
-    /* background-image: url("https://t3.ftcdn.net/jpg/03/16/53/88/360_F_316538859_TJ8brtVlusgxG8cV6nO2ydtVOARpjEe2.jpg"); */
     background-image: url('https://wallpaperaccess.com/full/5580641.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     height: cover;
-    /* background-color: rgb(148, 233, 239); */
 }
-
-/* .home-header {
-    background-image: url("https://t3.ftcdn.net/jpg/03/16/53/88/360_F_316538859_TJ8brtVlusgxG8cV6nO2ydtVOARpjEe2.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-} */
 
 nav {
     background-color: rgb(2, 0, 9);
@@ -88,6 +80,11 @@ img {
     margin-right: auto;
     width: 50%;
     border-radius: 10px;
+}
+
+.main img:hover {
+    transform: translateY(5px);
+    box-shadow: 0 2px 0 rgb(91, 212, 239);
 }
 
 h3 {

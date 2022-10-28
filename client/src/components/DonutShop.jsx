@@ -15,7 +15,6 @@ const DonutShop = () => {
         try{
           const response = await axios.get(`${Base_URL}/donutShops/${id}`)
           setDonutShop(response.data.donutShop)
-          // console.log(response.data.donutShop)
             } catch (err) {
               console.log(err)
             }
@@ -32,14 +31,12 @@ const DonutShop = () => {
 
       useEffect(() => {
         getDonutShop()
-        // console.log(donuts)
         getDonutsByShop()
       }, [])
 
       const deleteDonut = async (donutId) => {
         try {
           const response = await axios.delete(`${Base_URL}/donuts/${donutId}`)
-          // console.log(response)
           getDonutShop()
           getDonutsByShop()
         } catch (err) {

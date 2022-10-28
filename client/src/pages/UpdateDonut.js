@@ -21,7 +21,6 @@ const UpdateDonut = () => {
     const getDonutById = async () => {
       try {
         const response = await axios.get(`${Base_URL}/donuts/${donutId}`)
-        // console.log(response.data.donut)
         setDonutState(response.data.donut)
       } catch (err) {
         console.log(err)

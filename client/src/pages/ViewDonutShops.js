@@ -12,7 +12,6 @@ const ViewDonutShops = () => {
     const response = await axios.get(`${Base_URL}/donutShops`)
 
     setDonutShop(response.data.donutShop)
-    // console.log(response.data.donutShop)
   }
 
   useEffect(() => {
