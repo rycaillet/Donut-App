@@ -30,7 +30,7 @@ nav {
 .home-header h1 {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 30px;
     color:rgb(91, 212, 239);
 }
 
@@ -94,7 +94,7 @@ h3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 20%;
     color:rgb(91, 212, 239);
 }
 
@@ -158,6 +158,14 @@ h1 {
     text-align: center;
     margin: 10px;
     color:rgb(91, 212, 239);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px;
+    color:rgb(91, 212, 239);
+    padding: 40px;
 }
 
 body {
