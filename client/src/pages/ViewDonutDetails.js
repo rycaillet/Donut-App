@@ -2,7 +2,8 @@ import DonutDetails from '../components/DonutDetails'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { BASE_URL } from '../globals'
+
+const BASE_URL = '/api'
 
 const ViewDonutDetails = () => {
   const [donuts, setDonuts] = useState([])

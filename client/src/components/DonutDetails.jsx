@@ -1,9 +1,6 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
 
 const DonutDetails = ({donutName, price, image, onClick}) => {
-
-    let { id } = useParams()
 
     return (
         <div className="donuts" onClick={onClick}>

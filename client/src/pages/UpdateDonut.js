@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { BASE_URL } from '../globals'
+
+const BASE_URL = '/api'
 
 const UpdateDonut = () => {
   let { donutId } = useParams()

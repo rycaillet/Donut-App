@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import { BASE_URL } from '../globals'
+
+const BASE_URL = '/api'
 
 const DonutForm = () => {
   let navigate = useNavigate()

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
-import { BASE_URL } from '../globals'
+
+const BASE_URL = '/api'
 
 const DonutShop = () => {
 
