@@ -1,4 +1,4 @@
-const BASE_URL = 'https://donut-app123.herokuapp.com/api'
+const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
 module.exports = {
   BASE_URL
