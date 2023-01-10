@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const BASE_URL = '/api'
+const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
 const ViewDonutDetails = () => {
   const [donuts, setDonuts] = useState([])

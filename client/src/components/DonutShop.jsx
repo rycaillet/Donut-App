@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const BASE_URL = '/api'
+const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
 const DonutShop = () => {
 

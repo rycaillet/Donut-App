@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
-const BASE_URL = '/api'
+const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
 const UpdateDonut = () => {
   let { donutId } = useParams()
