@@ -19,6 +19,19 @@ nav {
     padding: 10px;
 }
 
+.home-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-image {
+    height: 15%;
+    width: 15%;
+    padding: 10rem;
+    border-radius: 50%;
+    transform:rotate(-40deg);
+}
+
 .home-header h1 {
     display: flex;
     justify-content: center;
@@ -85,7 +98,7 @@ img {
 .main img:hover {
     transform: translateY(5px);
     box-shadow: 0 2px 0 rgb(91, 212, 239);
-}
+} 
 
 h3 {
     display: block;
@@ -258,7 +271,7 @@ input {
     margin-left: 10px;
   }
 
-  #donut-picture-1 {
+  /* #donut-picture-1 {
     background-image: url("https://i.imgur.com/0RcLeBE.jpeg");
   }
   
@@ -270,7 +283,24 @@ input {
     margin-left: 850px;
     border-radius: 25%;
     transform:rotate(-40deg);
-  }
+  } */
+
+  /* #donut-picture-1 {
+    background-image: url("https://i.imgur.com/0RcLeBE.jpeg");
+    background-size: cover;
+}
+
+.donut-picture {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 25%;
+    transform:rotate(-40deg);
+} */
+
+.main img:hover {
+    transform: translateY(5px);
+    box-shadow: 0 2px 0 rgb(91, 212, 239);
+} 
 
   @keyframes vibrate {
     0% { transform: rotate(0deg); }
@@ -286,7 +316,7 @@ input {
     100% { transform: rotate(-1deg); }
   }
 
-  .donut-picture:hover {
+  .home-image:hover {
     animation: vibrate 0.5s;
     animation-iteration-count: infinite;
   }
