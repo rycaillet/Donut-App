@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const UpdateDonut = () => {
   let { donutId } = useParams()
@@ -20,7 +19,7 @@ const UpdateDonut = () => {
   useEffect(() => {
     const getDonutById = async () => {
       try {
-        const response = await axios.get(`${Base_URL}/donuts/${donutId}`)
+        const response = await axios.get(`${BASE_URL}/donuts/${donutId}`)
         setDonutState(response.data.donut)
       } catch (err) {
         console.log(err)
@@ -33,7 +32,7 @@ const UpdateDonut = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     try {
-      axios.put(`${Base_URL}/donuts/${donutId}`, donutState)
+      axios.put(`${BASE_URL}/donuts/${donutId}`, donutState)
     } catch (err) {
       console.log(err)
     }

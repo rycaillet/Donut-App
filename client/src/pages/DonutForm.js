@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
+import { BASE_URL } from '../globals'
 
 const DonutForm = () => {
   let navigate = useNavigate()
@@ -16,7 +17,7 @@ const DonutForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/api/donuts', formState)
+    axios.post(`${BASE_URL}/donuts`, formState)
 
     setFormState(initialForm)
     navigate(`/donutshops/${id}`)

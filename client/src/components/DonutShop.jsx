@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
-
-const Base_URL='http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const DonutShop = () => {
 
@@ -13,7 +12,7 @@ const DonutShop = () => {
 
     const getDonutShop = async () => {
         try{
-          const response = await axios.get(`${Base_URL}/donutShops/${id}`)
+          const response = await axios.get(`${BASE_URL}/donutShops/${id}`)
           setDonutShop(response.data.donutShop)
             } catch (err) {
               console.log(err)
@@ -22,7 +21,7 @@ const DonutShop = () => {
 
       const getDonutsByShop = async () => {
         try {
-            const response = await axios.get(`${Base_URL}/donutShops/${id}/donuts`)
+            const response = await axios.get(`${BASE_URL}/donutShops/${id}/donuts`)
             setDonuts(response.data)
             } catch (err) {
               console.log(err)
@@ -36,7 +35,7 @@ const DonutShop = () => {
 
       const deleteDonut = async (donutId) => {
         try {
-          const response = await axios.delete(`${Base_URL}/donuts/${donutId}`)
+          const response = await axios.delete(`${BASE_URL}/donuts/${donutId}`)
           getDonutShop()
           getDonutsByShop()
         } catch (err) {

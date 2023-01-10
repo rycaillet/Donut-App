@@ -2,14 +2,13 @@ import DonutDetails from '../components/DonutDetails'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const ViewDonutDetails = () => {
   const [donuts, setDonuts] = useState([])
 
   const getDonuts = async () => {
-    const response = await axios.get(`${Base_URL}/donuts`)
+    const response = await axios.get(`${BASE_URL}/donuts`)
 
     setDonuts(response.data.donuts)
   }

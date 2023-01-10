@@ -2,14 +2,13 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
-const Base_URL = 'http://localhost:3001/api'
+import { BASE_URL } from '../globals'
 
 const ViewDonutShops = () => {
   const [donutShop, setDonutShop] = useState([])
 
   const getDonutShop = async () => {
-    const response = await axios.get(`${Base_URL}/donutShops`)
+    const response = await axios.get(`${BASE_URL}/donutShops`)
 
     setDonutShop(response.data.donutShop)
   }
