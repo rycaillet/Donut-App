@@ -28,7 +28,7 @@ const Nav = () => {
   return (
     <header>
       <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-        <div className="navbar-brand">Donut Shop</div>
+        <div className="navbar-brand">Welcome!</div>
         <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <div></div>
           <div></div>

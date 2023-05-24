@@ -730,23 +730,39 @@ input {
   }
   
   @media only screen and (max-width: 767px) {
-    .navbar-toggle div {
-      height: 4px;
-    }
-    
     .navbar {
-      height: 80px;
+      height: auto;
       padding: 10px;
     }
-    
+  
+    .navbar-brand {
+      margin-bottom: 10px;
+    }
+  
     .navbar-toggle {
       margin-right: 10px;
     }
-    .navbar-links {
-        display: none;
+  
+    .navbar-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #f8f8f8;
+      display: none;
     }
+  
     .navbar-menu.open {
-        display: block;
+      display: block;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+    }
+  
+    .navbar-links a {
+      margin-bottom: 10px;
     }
   }
   
