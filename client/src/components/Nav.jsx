@@ -17,13 +17,13 @@ const Nav = () => {
       </div>
       <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <li className="navbar-item">
-          <a href={`https://donut-app.herokuapp.com/api/home`} className="navbar-link">Home</a>
+          <a href={`/`} className="navbar-link">Home</a>
         </li>
         <li className="navbar-item">
-          <a href={`https://donut-app.herokuapp.com/api/about`} className="navbar-link">About</a>
+          <a href={`/about`} className="navbar-link">About</a>
         </li>
         <li className="navbar-item">
-          <a href={`https://donut-app.herokuapp.com/api/donutShops`} className="navbar-link">Donut Shops</a>
+          <a href={`/donutShops`} className="navbar-link">Donut Shops</a>
         </li>
       </ul>
     </nav>
