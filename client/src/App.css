@@ -694,11 +694,6 @@ input {
   }
   
   @media only screen and (max-width: 767px) {
-    .navbar .navbar-toggle {
-      display: flex;
-      margin-bottom: 10px;
-    }
-  
     .navbar .navbar-menu {
       display: none;
     }
@@ -707,14 +702,8 @@ input {
       display: block;
     }
   
-    .navbar .navbar-links {
+    .navbar .navbar-toggle {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar .navbar-links a {
-      margin-bottom: 10px;
     }
   
     .navbar .navbar-brand {
@@ -722,18 +711,3 @@ input {
     }
   }
   
-  @media only screen and (min-width: 768px) {
-    .navbar .navbar-toggle {
-      display: none;
-    }
-    
-    .navbar .navbar-links {
-      display: flex;
-      align-items: center;
-    }
-  
-    .navbar .navbar-links a {
-      margin-left: 20px;
-      padding: 0;
-    }
-  }
