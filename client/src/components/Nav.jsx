@@ -26,9 +26,6 @@ const Nav = () => {
           <a href={`https://donut-app.herokuapp.com/api/donutShops`} className="navbar-link">Donut Shops</a>
         </li>
       </ul>
-      <div className="navbar-mobile-toggle" onClick={toggleMobileMenu}>
-        <span className="navbar-mobile-toggle-icon"></span>
-      </div>
     </nav>
   );
 };

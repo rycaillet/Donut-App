@@ -787,7 +787,7 @@ input {
   
   /* Mobile menu styles */
   .navbar-mobile-toggle {
-    display: none;
+    display: block;
     cursor: pointer;
   }
   
@@ -804,12 +804,12 @@ input {
     background-color: transparent;
   }
   
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .navbar-menu {
-      display: none;
+      display: flex;
     }
   
     .navbar-mobile-toggle {
-      display: block;
+      display: none;
     }
   }
