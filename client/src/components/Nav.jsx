@@ -29,21 +29,23 @@ const Nav = () => {
     <header>
       <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <div className="navbar-brand">Donut Shop</div>
-        <div className="navbar-toggle" onClick={toggleMenu}>
+        <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <div></div>
           <div></div>
           <div></div>
         </div>
         <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={toggleMenu}>
-            Home
-          </Link>
-          <Link to="/about" onClick={toggleMenu}>
-            About
-          </Link>
-          <Link to="/donutShops" onClick={toggleMenu}>
-            Donut Shops
-          </Link>
+          <div className="navbar-links">
+            <Link to="/" onClick={toggleMenu}>
+              Home
+            </Link>
+            <Link to="/about" onClick={toggleMenu}>
+              About
+            </Link>
+            <Link to="/donutShops" onClick={toggleMenu}>
+              Donut Shops
+            </Link>
+          </div>
         </div>
       </nav>
     </header>
