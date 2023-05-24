@@ -15,42 +15,26 @@
 
 // export default Nav
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 767);
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <header>
       <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <div className="navbar-brand">
-          {isMobile ? (
-            <div className="navbar-toggle" onClick={toggleMenu}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          ) : (
-            <span>Welcome!</span>
-          )}
+          <span>Welcome!</span>
+        </div>
+        <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
         <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <div className="navbar-links">
