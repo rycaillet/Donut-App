@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Nav.css';
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
