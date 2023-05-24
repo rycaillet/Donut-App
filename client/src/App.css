@@ -621,15 +621,13 @@ input {
   }
   
   .navbar-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
   }
   
   .navbar-menu.open {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
   }
   
   .navbar-menu a {
@@ -676,6 +674,8 @@ input {
   @media only screen and (min-width: 769px) {
     .navbar-menu {
       display: flex;
+      flex-direction: row;
+      align-items: center;
     }
   
     .navbar-toggle {
