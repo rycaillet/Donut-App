@@ -787,6 +787,7 @@ input {
     color: #666;
   }
   
+  /* Mobile menu styles */
   .navbar-mobile-toggle {
     display: none;
   }
@@ -794,7 +795,7 @@ input {
   .navbar-mobile-toggle-icon {
     display: block;
     width: 30px;
-    height: 2px;
+    height: 3px;
     background-color: #333;
     margin: 6px 0;
     transition: background-color 0.3s;
@@ -830,5 +831,14 @@ input {
     .navbar-mobile-toggle {
       display: flex;
       cursor: pointer;
+    }
+  
+    .navbar-item {
+      margin: 8px 0;
+      text-align: center;
+    }
+  
+    .navbar-link {
+      font-size: 20px;
     }
   }
