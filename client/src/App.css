@@ -628,7 +628,7 @@ input {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    margin-right: 20px;
+    z-index: 1000;
   }
   
   .navbar-toggle div {
@@ -658,6 +658,7 @@ input {
     background-color: #f8f8f8;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
   }
   
   .navbar-menu.open {
@@ -740,6 +741,12 @@ input {
     
     .navbar-toggle {
       margin-right: 10px;
+    }
+    .navbar-links {
+        display: none;
+    }
+    .navbar-menu.open {
+        display: block;
     }
   }
   
