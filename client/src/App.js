@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Nav from './components/Nav'
-import { Route, Routes, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
 import ViewDonutShops from './pages/ViewDonutShops'
 import DonutShop from './components/DonutShop'
@@ -14,14 +14,14 @@ function App() {
     <div>
       <Nav />
       <div className="pages">
-        <Switch>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/donutShops" element={<ViewDonutShops />} />
           <Route path="/donutshops/:id" element={<DonutShop />} />
           <Route path="/donutshops/:id/donutForm" element={<DonutForm />} />
           <Route path="/donut/:donutId/update" element={<UpdateDonut />} />
-        </Switch>
+        </Routes>
       </div>
     </div>
   )
