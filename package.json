@@ -27,7 +27,8 @@
     "express": "^4.18.2",
     "mongodb": "4.1",
     "mongoose": "^6.6.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "switch": "^0.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
