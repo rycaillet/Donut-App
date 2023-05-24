@@ -796,7 +796,7 @@ input {
   .navbar-mobile-toggle-icon {
     display: block;
     width: 30px;
-    height: 4px;
+    height: 3px;
     background-color: #333;
     margin: 6px 0;
     transition: background-color 0.3s;
