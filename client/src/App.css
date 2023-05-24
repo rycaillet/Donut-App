@@ -694,15 +694,40 @@ input {
   }
   
   @media only screen and (min-width: 768px) {
-    .navbar .navbar-menu {
+    .navbar {
+      flex-direction: row;
+      height: auto;
+    }
+  
+    .navbar-brand {
+      margin-right: 20px;
+    }
+  
+    .navbar-toggle {
+      display: none;
+    }
+  
+    .navbar-menu {
       display: flex;
+      position: relative;
+      top: auto;
+      right: auto;
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
     }
   
-    .navbar .navbar-menu.open {
-      display: block;
+    .navbar-links {
+      flex-direction: row;
     }
   
-    .navbar .navbar-toggle {
+    .navbar-links a {
+      font-size: 1rem;
+      padding: 0 10px;
+      border-radius: 0;
+    }
+  
+    .navbar-overlay {
       display: none;
     }
   }
