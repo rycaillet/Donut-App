@@ -694,19 +694,19 @@ input {
   }
   
   @media only screen and (max-width: 767px) {
-    .navbar .navbar-menu {
+    .navbar-menu {
       display: none;
     }
   
-    .navbar .navbar-menu.open {
+    .navbar-menu.open {
       display: block;
     }
   
-    .navbar .navbar-toggle {
+    .navbar-toggle {
       display: flex;
     }
   
-    .navbar .navbar-brand {
+    .navbar-brand {
       display: block;
     }
   }

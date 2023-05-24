@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
     <header>
-      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+      <div className={`navbar ${isOpen ? 'open' : ''}`}>
         <div className="navbar-brand">
           {isOpen ? (
             <div className="navbar-toggle" onClick={toggleMenu}>
@@ -52,7 +52,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
       {isOpen && <div className="navbar-overlay" onClick={toggleMenu}></div>}
     </header>
   );
