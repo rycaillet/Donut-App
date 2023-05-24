@@ -57,8 +57,11 @@
 
 // export default Nav;
 
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 const Nav = () => {
-    const [click, setClick] = React.useState(false);
+    const [click, setClick] = useState(false);
   
     const handleClick = () => setClick(!click);
     const Close = () => setClick(false);
