@@ -737,11 +737,11 @@ input {
     padding: 0;
     font-family: Arial, sans-serif;
   }
-
+  
   .pages {
     padding: 20px;
   }
-
+  
   /* Nav Bar  */
   
   .navbar {
@@ -787,7 +787,6 @@ input {
     color: #666;
   }
   
-  /* Mobile menu styles */
   .navbar-mobile-toggle {
     display: none;
   }
@@ -806,7 +805,7 @@ input {
     content: "";
     display: block;
     width: 100%;
-    height: 100%;
+    height: 3px;
     background-color: #333;
     transition: transform 0.3s;
   }
@@ -830,6 +829,8 @@ input {
   
     .navbar-mobile-toggle {
       display: flex;
+      justify-content: flex-end;
+      align-items: center;
       cursor: pointer;
     }
   
@@ -841,4 +842,19 @@ input {
     .navbar-link {
       font-size: 20px;
     }
+  
+    .navbar-logo {
+      text-align: center;
+    }
+  
+    .navbar-menu.open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .navbar-mobile-toggle.open .navbar-mobile-toggle-icon {
+      transform: rotate(180deg);
+    }
   }
+  
