@@ -813,4 +813,11 @@ input {
     .navbar-mobile-toggle {
       display: none;
     }
+    .navbar-mobile-toggle.open {
+        display: none;
+      }
+    
+      .navbar-menu.open {
+        display: flex !important;
+      }
   }
