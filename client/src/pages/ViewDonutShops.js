@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const BASE_URL = 'https://donut-app.herokuapp.com/api/'
+const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
 const ViewDonutShops = () => {
   const [donutShop, setDonutShop] = useState([])
