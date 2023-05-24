@@ -638,8 +638,15 @@ input {
     transition: transform 0.3s, background-color 0.3s;
   }
   
+  .navbar-toggle.open div:nth-child(1),
+  .navbar-toggle.open div:nth-child(2),
+  .navbar-toggle.open div:nth-child(3) {
+    transform: rotate(45deg);
+  }
+  
   .navbar-toggle.open div:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform-origin: top left;
+    margin-top: 8px;
   }
   
   .navbar-toggle.open div:nth-child(2) {
@@ -647,7 +654,8 @@ input {
   }
   
   .navbar-toggle.open div:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform-origin: top right;
+    margin-top: -8px;
   }
   
   .navbar-menu {
