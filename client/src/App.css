@@ -769,6 +769,7 @@ input {
   
   .navbar-menu.open {
     display: flex;
+    flex-direction: column;
   }
   
   .navbar-item {
