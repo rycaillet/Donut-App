@@ -48,6 +48,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
+      {isOpen && <div className="navbar-overlay" onClick={toggleMenu}></div>}
     </header>
   );
 };

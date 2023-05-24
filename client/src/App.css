@@ -680,20 +680,49 @@ input {
     background-color: #eee;
   }
   
-  @media only screen and (min-width: 769px) {
-    .navbar-menu {
-      position: static;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+  .navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .navbar {
+      padding: 20px;
+    }
+  
+    .navbar-brand {
+      font-size: 2rem;
     }
   
     .navbar-toggle {
       display: none;
     }
   
+    .navbar-menu {
+      display: flex;
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0;
+    }
+  
     .navbar-links {
       flex-direction: row;
+      align-items: center;
+    }
+  
+    .navbar-links a {
+      margin-left: 20px;
+      padding: 0;
+    }
+  
+    .navbar-overlay {
+      display: none;
     }
   }
   
