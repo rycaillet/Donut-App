@@ -746,6 +746,8 @@ input {
   nav {
     background: #333;
     padding: 20px;
+    display: flex;
+    justify-content: flex-end;
   }
   
   ul.menu {
@@ -753,7 +755,7 @@ input {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
   
   ul.menu li {
@@ -769,6 +771,7 @@ input {
   .mobile-menu-toggle {
     display: none;
     cursor: pointer;
+    margin-left: auto;
     margin-right: 10px;
   }
   
@@ -778,7 +781,7 @@ input {
     height: 3px;
     margin-bottom: 5px;
     position: relative;
-    background: #333;
+    background: #fff;
     border-radius: 3px;
     transform-origin: 4px 0;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
@@ -807,7 +810,7 @@ input {
   }
   
   .menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 10px;
     background-color: #f5f5f5;
@@ -823,6 +826,9 @@ input {
     }
   
     .menu {
-      display: none;
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
     }
   }
