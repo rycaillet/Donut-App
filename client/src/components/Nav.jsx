@@ -15,21 +15,34 @@
 
 // export default Nav
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 767);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header>
-      <div className={`navbar ${isOpen ? 'open' : ''}`}>
+      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <div className="navbar-brand">
-          {isOpen ? (
+          {isMobile ? (
             <div className="navbar-toggle" onClick={toggleMenu}>
               <div></div>
               <div></div>
@@ -52,7 +65,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </nav>
       {isOpen && <div className="navbar-overlay" onClick={toggleMenu}></div>}
     </header>
   );
