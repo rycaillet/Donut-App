@@ -744,93 +744,72 @@ input {
 
   /* Nav Bar  */
   
-  .nav {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f0f0f0;
     padding: 10px;
-    background-color: #f2f2f2;
   }
   
-  .menu {
+  .navbar-logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .navbar-menu {
+    list-style-type: none;
     display: flex;
-    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
-    width: 100%;
   }
   
-  .menu li {
-    margin-left: 20px;
+  .navbar-menu.open {
+    display: block;
   }
   
-  .menu li:first-child {
-    margin-left: 0;
+  .navbar-item {
+    margin: 0 10px;
   }
   
-  .menu a {
-    color: #333;
+  .navbar-link {
     text-decoration: none;
-    font-weight: 600;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
   }
   
-  .mobile-menu-toggle {
+  .navbar-link:hover {
+    color: #666;
+  }
+  
+  /* Mobile menu styles */
+  .navbar-mobile-toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
     cursor: pointer;
   }
   
-  .mobile-menu-toggle span {
+  .navbar-mobile-toggle-icon {
     display: block;
-    width: 100%;
+    width: 20px;
     height: 2px;
     background-color: #333;
-    transition: all 0.3s ease-in-out;
+    margin: 4px 0;
+    transition: background-color 0.3s;
   }
   
-  .open span:first-child {
-    transform: translateY(7px) rotate(45deg);
+  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon {
+    background-color: transparent;
   }
   
-  .open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .open span:last-child {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .menu {
+  @media (max-width: 768px) {
+    .navbar-menu {
       display: none;
     }
-    
-    .mobile-menu-toggle {
-      display: flex;
-    }
-    
-    .open {
+  
+    .navbar-mobile-toggle {
       display: block;
-    }
-    
-    .menu.open {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #f2f2f2;
-      padding: 20px;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-    }
-    
-    .menu.open li {
-      margin: 10px 0;
     }
   }

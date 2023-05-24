@@ -1,33 +1,37 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './Nav.css';
 
-function Nav() {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+const Nav = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav>
-      <div className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        Donut Diver
       </div>
-      <ul className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <li>
-          <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+      <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <li className="navbar-item">
+          <a href="#" className="navbar-link">Home</a>
         </li>
-        <li>
-          <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <li className="navbar-item">
+          <a href="#" className="navbar-link">About</a>
         </li>
-        <li>
-          <Link to="/donutShops" onClick={() => setMobileMenuOpen(false)}>Donut Shops</Link>
+        <li className="navbar-item">
+          <a href="#" className="navbar-link">Services</a>
+        </li>
+        <li className="navbar-item">
+          <a href="#" className="navbar-link">Contact</a>
         </li>
       </ul>
+      <div className="navbar-mobile-toggle" onClick={toggleMobileMenu}>
+        <span className="navbar-mobile-toggle-icon"></span>
+      </div>
     </nav>
   );
-}
+};
 
 export default Nav;
