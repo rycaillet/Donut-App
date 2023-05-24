@@ -29,12 +29,12 @@ const Nav = () => {
     <header>
       <nav className={`navbar ${isOpen ? 'open' : ''}`}>
         <div className="navbar-brand">
+          <div className="navbar-toggle" onClick={toggleMenu}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <span>Welcome!</span>
-        </div>
-        <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
         <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <div className="navbar-links">
