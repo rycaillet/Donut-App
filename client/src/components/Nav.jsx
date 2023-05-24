@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+function Nav() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
   };
 
   return (
@@ -20,14 +16,14 @@ const Nav = () => {
         <span></span>
       </div>
       <ul className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <li onClick={closeMobileMenu}>
-          <Link to="/">Home</Link>
+        <li>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
         </li>
-        <li onClick={closeMobileMenu}>
-          <Link to="/about">About</Link>
+        <li>
+          <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
         </li>
-        <li onClick={closeMobileMenu}>
-          <Link to="/donutShops">Donut Shops</Link>
+        <li>
+          <Link to="/donutShops" onClick={() => setMobileMenuOpen(false)}>Donut Shops</Link>
         </li>
       </ul>
     </nav>
