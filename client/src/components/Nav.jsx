@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,13 +18,13 @@ const Nav = () => {
       </div>
       <ul className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
         <li className="navbar-item">
-          <a href={`/`} className="navbar-link">Home</a>
+          <Link to="/" className="navbar-link">Home</Link>
         </li>
         <li className="navbar-item">
-          <a href={`/about`} className="navbar-link">About</a>
+          <Link to="/about" className="navbar-link">About</Link>
         </li>
         <li className="navbar-item">
-          <a href={`/donutShops`} className="navbar-link">Donut Shops</a>
+          <Link to="/donutShops" className="navbar-link">Donut Shops</Link>
         </li>
       </ul>
     </nav>
