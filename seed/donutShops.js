@@ -18,7 +18,7 @@ const main = async () => {
       review: '4 out of 5 stars',
       url: 'duckdonuts.com',
       image:
-        'https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Duck_Donuts_%28logo%29.svg/1200px-Duck_Donuts_%28logo%29.svg.png'
+        'https://ih1.redbubble.net/image.2114906141.6908/st,small,507x507-pad,600x600,f8f8f8.jpg'
     },
     {
       name: 'DONUTCHEW',
