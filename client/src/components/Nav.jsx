@@ -42,10 +42,10 @@ const Nav = () => {
             Donut Shops
           </Link>
         </div>
-        <div className="navbar-toggle" onClick={toggleMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className={`navbar-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </nav>
     </header>
