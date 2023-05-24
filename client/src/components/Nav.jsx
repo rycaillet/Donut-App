@@ -19,19 +19,22 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsOpen(!isOpen);
   };
 
   return (
     <header>
-      <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
-        <div className="navbar-brand">
-          <Link to="/">Donut Shop</Link>
+      <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+        <div className="navbar-brand">Donut Shop</div>
+        <div className="navbar-toggle" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
+        <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <Link to="/" onClick={toggleMenu}>
             Home
           </Link>
@@ -41,11 +44,6 @@ const Nav = () => {
           <Link to="/donutShops" onClick={toggleMenu}>
             Donut Shops
           </Link>
-        </div>
-        <div className={`navbar-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
         </div>
       </nav>
     </header>
