@@ -48,45 +48,48 @@ const UpdateDonut = () => {
 
   return (
     <div className="update-donut">
-      <h1>Edit Donut</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Donut Name:</label>
-          <input
-            type="text"
-            id="name"
-            onChange={handleChange}
-            value={donutState?.name}
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="image">Image URL:</label>
-          <input
-            type="text"
-            id="image"
-            onChange={handleChange}
-            value={donutState?.image}
-            required
-          ></input>
-        </div>
-        <div>
-          <label htmlFor="price">Price:</label>
-          <input
-            type="text"
-            id="price"
-            onChange={handleChange}
-            value={donutState?.price}
-            required
-          ></input>
-        </div>
-        <div>
-          <button type="submit" className="button2">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
+    <h1 className="heading">Edit Donut</h1>
+    <form className="form-wrapper" onSubmit={handleSubmit}>
+      <div>
+        <label className="label" htmlFor="name">Donut Name:</label>
+        <input
+          type="text"
+          id="name"
+          className="input-field"
+          onChange={handleChange}
+          value={donutState?.name}
+          required
+        />
+      </div>
+      <div>
+        <label className="label" htmlFor="image">Image URL:</label>
+        <input
+          type="text"
+          id="image"
+          className="input-field"
+          onChange={handleChange}
+          value={donutState?.image}
+          required
+        />
+      </div>
+      <div>
+        <label className="label" htmlFor="price">Price:</label>
+        <input
+          type="text"
+          id="price"
+          className="input-field"
+          onChange={handleChange}
+          value={donutState?.price}
+          required
+        />
+      </div>
+      <div>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
   )
 }
 

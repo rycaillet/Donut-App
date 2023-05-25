@@ -19,13 +19,13 @@ const ViewDonutShops = () => {
   }, [])
 
   return (
-    <div className="main">
-      <h1>Donut Shops</h1>
+    <div className="main-donutShop-container">
+      <h1 className="title">Donut Shops</h1>
       <section className="donutShop-container">
         {donutShop?.map((donutShops) => (
-          <Link to={`/donutshops/${donutShops._id}`} key={donutShops._id}>
-            <h2>{donutShops.name}</h2>
-            <img src={donutShops.image}></img>
+          <Link to={`/donutshops/${donutShops._id}`} key={donutShops._id} className="donutShop-link">
+            <h2 className="donutShop-name">{donutShops.name}</h2>
+            <img src={donutShops.image} alt={donutShops.name} className="donutShop-image"></img>
           </Link>
         ))}
       </section>

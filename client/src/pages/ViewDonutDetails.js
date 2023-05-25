@@ -2,6 +2,7 @@ import DonutDetails from '../components/DonutDetails'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import './App.css'
 
 const BASE_URL = 'https://donut-app.herokuapp.com/api'
 
@@ -19,7 +20,7 @@ const ViewDonutDetails = () => {
   }, [])
 
   return (
-    <div className="main">
+    <div className="main-donutShop-details">
       <h1>Donuts</h1>
       <section className="donutShop-container">
         {donuts.map((donut) => (

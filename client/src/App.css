@@ -731,15 +731,13 @@ input {
       display: none;
     }
   } */
+
+  /* This is my old css I used to have for this app and I wanted to keep it for memorial (the code above) */
   
   body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-  }
-  
-  .pages {
-    padding: 20px;
   }
   
   /* Nav Bar  */
@@ -749,7 +747,11 @@ input {
     justify-content: space-between;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 3rem;
+    background-image: url("https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
   .navbar-logo {
@@ -758,17 +760,65 @@ input {
   }
   
   .navbar-menu {
-    list-style-type: none;
+    display: none;
+    list-style: none;
+  }
+  
+  .navbar-mobile-toggle {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+    width: 30px;
+  }
+  
+  .navbar-mobile-toggle-icon {
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-mobile-toggle-icon:last-child {
+    margin-bottom: 0;
   }
   
   .navbar-menu.open {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 6%;
+    background-color: #f0f0f0;
+    z-index: 10;
+  }
+  
+  .navbar-mobile-toggle.open + .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    right: 1rem;
+    width: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 3rem;
+  }
+  
+  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   
   .navbar-item {
@@ -781,45 +831,11 @@ input {
     font-weight: bold;
     transition: color 0.3s;
     font-size: 25px;
+    list-style: none;
   }
   
   .navbar-link:hover {
     color: #666;
-  }
-  
-  .navbar-mobile-toggle {
-    display: none;
-  }
-  
-  .navbar-mobile-toggle-icon {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: background-color 0.3s;
-  }
-  
-  .navbar-mobile-toggle-icon::before,
-  .navbar-mobile-toggle-icon::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    transition: transform 0.3s;
-  }
-  
-  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon {
-    background-color: transparent;
-  }
-  
-  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon::before {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .navbar-mobile-toggle.open .navbar-mobile-toggle-icon::after {
-    transform: translateY(-8px) rotate(-45deg);
   }
   
   @media (max-width: 767px) {
@@ -832,11 +848,6 @@ input {
       justify-content: flex-end;
       align-items: center;
       cursor: pointer;
-    }
-  
-    .navbar-item {
-      margin: 8px 0;
-      text-align: center;
     }
   
     .navbar-link {
@@ -853,8 +864,505 @@ input {
       align-items: flex-end;
     }
   
-    .navbar-mobile-toggle.open .navbar-mobile-toggle-icon {
-      transform: rotate(180deg);
+    .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar-mobile-toggle.open .navbar-mobile-toggle-icon:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .navbar-menu.open .navbar-item {
+      margin: 15px 0;
+    }
+    .navbar-mobile-toggle-icon {
+        width: 30px;
+      }
+  }
+  
+  /* Home Page  */
+
+  .home-container {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/11124951/pexels-photo-11124951.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home-words-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+  
+  .home-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-image {
+    width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .home-title {
+      font-size: 26px;
+    }
+  
+    .home-image {
+      width: 200px;
+    }
+  
+    .home-description {
+      font-size: 16px;
     }
   }
   
+  @media (max-width: 480px) {
+    .home-title {
+      font-size: 22px;
+    }
+  
+    .home-image {
+      width: 150px;
+    }
+  
+    .home-description {
+      font-size: 14px;
+    }
+  }
+
+  /* About Page  */
+  
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center content vertically */
+        padding: 20px;
+        text-align: center;
+        height: 100vh; /* Make the container full height */
+        box-sizing: border-box; /* Include padding in height calculation */
+        background-image: url("https://images.pexels.com/photos/1982485/pexels-photo-1982485.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .about-content {
+        margin-bottom: 20px;
+      }
+      
+      .about-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .about-description {
+        font-size: 1.125rem;
+        color: #666;
+        line-height: 1.5;
+      }
+      
+      .about-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 6rem;
+      }
+      
+      /* Mobile-friendly styles */
+      @media (max-width: 600px) {
+        .about-content {
+          margin-bottom: 10px;
+          background-color: red;
+        }
+      
+        .about-title {
+          font-size: 24px !important; 
+        }
+      
+        .about-description {
+          font-size: 16px !important; 
+        }
+      }
+
+      /* Donut Shop Page  */
+
+      .main-donutShop-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        background-image: url("https://images.pexels.com/photos/796607/pexels-photo-796607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .title {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+        color: white;
+      }
+      
+      .donutShop-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .donutShop-link {
+        text-decoration: none;
+        color: #333;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+        color:white;
+      }
+      
+      .donutShop-link:hover {
+        transform: scale(1.05);
+      }
+      
+      .donutShop-name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .donutShop-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      
+      .donutShop-image:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Media Queries */
+      @media (max-width: 600px) {
+        .title {
+          font-size: 24px;
+        }
+      
+        .donutShop-name {
+          font-size: 20px;
+        }
+      
+        .donutShop-image {
+          max-width: 250px;
+        }
+      }
+
+      /* Donut Details  */
+
+      .donut-shops {
+        padding:20px;
+        background-image: url("https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .main-donutShop-details {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .donutShop-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+      }
+      
+      .donuts {
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        padding: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .donuts:hover {
+        background-color: #e0e0e0;
+      }
+      
+      .info-wrapper {
+        text-align: center;
+      }
+      
+      h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .img-wrapper img {
+        width: 70%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center; 
+        margin: 0 auto; 
+      }
+      
+      p {
+        font-size: 24px;
+        margin-bottom: 0;
+      }
+      
+      button {
+        display: block;
+        margin: 20px auto;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      button:hover {
+        background-color: #666;
+      }
+
+      .donut-shop-image {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center center;
+      }
+      
+      .donut-image {
+        width: 70%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 15px;
+        margin: 0 auto;
+        display:block;
+      }
+      
+      .info-wrapper {
+        text-align: center;
+      }
+
+      .price {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .donutShop-container {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+
+    /* Update Donut Form  */
+
+    .update-donut {
+        height: 77vh;
+        margin: 0 auto;
+        padding-top: 5rem;
+        background-image: url("https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .heading {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: .5rem;
+        padding-bottom: 2rem;
+      }
+      
+      .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 1.5rem;
+      }
+      
+      .label {
+        font-size: 18px;
+        text-align: center;
+      }
+      
+      .input-field {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .submit-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .submit-button:hover {
+        background-color: #666;
+      }
+      
+      @media (max-width: 767px) {
+        .update-donut {
+          max-width: 100%;
+          border-radius: 0;
+        }
+      }
+
+      .form-wrapper {
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        text-align: center;
+      }
+      
+      .form-wrapper > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        grid-gap: 0.5rem;
+      }
+      
+      .input-field {
+        width: 250px;
+        max-width: 100%;
+      }
+
+    /* Donut Form  */
+
+    .donutForm {
+        height: 77vh;
+        margin: 0 auto;
+        padding-top: 5rem;
+        background-image: url("https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .add {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+      }
+      
+      .donutForm form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 1.5rem;
+      }
+      
+      .donutForm label {
+        font-size: 18px;
+        text-align: center;
+      }
+      
+      .donutForm input {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      
+      .donutForm button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .donutForm button:hover {
+        background-color: #666;
+      }
+      
+      @media (max-width: 767px) {
+        .donutForm {
+          max-width: 100%;
+          border-radius: 0;
+        }
+      }
+      
+      .donutForm form {
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        text-align: center;
+      }
+      
+      .donutForm form > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        grid-gap: 0.5rem;
+      }
+      
+      .donutForm input {
+        width: 250px;
+        max-width: 100%;
+      }
